@@ -1,0 +1,33 @@
+---------------------------------------------------
+Database Queries for ATM Project (MySQL WorkBench)
+---------------------------------------------------
+
+1 - Create database with name bankmanagementsystem in mysql
+
+create database bankmanagementsystem;
+
+2 - Select the database you just created
+
+use bankmanagementsystem;
+
+3 - Create our first Table in the selected database with name signup
+
+create table signup(formno char(20), name char(20), father_name char(20), dob varchar(20), gender char(6), email varchar(30), marital_status char(20), address varchar(50), 
+                    city char(25), state char(25), pin_code int);
+
+4 - Create the second table to store more information of user
+
+create table signuptwo(formno varchar(20), religion char(20), category char(20), income char(20), education char(20), occupation char(20), pan varchar(20), 
+aadhar char(20), senior_citizen char(20), existing_account char(20));
+
+5 - Create the third table to store the account information of user
+
+create table signupthree (formno varchar(20), accountType varchar(40), cardnumber char(25), pinnumber char(10), facility char(100));
+
+6 - Create the Login table to store login information
+
+create table login (formno varchar(20), cardnumber char(25), pinnumber char(10));
+
+7 - Now create bank table to store transactions related information 
+
+create table bank(pinnumber char(10), date varchar(50), type varchar(20), amount varchar(20));
